@@ -1,0 +1,25 @@
+//TODD: 'should make use of schema.graphql for schema defination'
+
+type Post {
+  id: Int
+  title: String
+  content: String
+  description: String
+  imageurl: String
+  created_at: String
+  updated_at: String
+  likes: Int
+  comments: Int
+}
+
+type User {
+  email: String
+  name: String
+  user_id: Int
+  profileimg: String
+}
+
+type Query {
+  posts: [Post]
+  users: [User]
+}
