@@ -48,7 +48,7 @@ apolloServer.start().then(() => {
         console.error("Error acquiring client", err.stack);
         return;
       }
-      console.log("connected to db");
+      console.log("connected to db", process.env.POSTGRES_URL);
       //   pool.query(`SELECT * FROM posts`).then((res) => console.log(res.rows));
     });
     console.log(`server started on ${PORT}`);

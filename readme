@@ -1,0 +1,22 @@
+Docker Basics
+
+1. Create Dockerfile with all the commands
+
+   a. FROM command - which pulls the base necessary (images) requirements depencies for running our app. Eg: node image for Node application
+   b. WORKDIR command - to create a dir in container where we put all the code in container
+   eg: WORKDIR [workdirname]
+   c.COPY command - which copies all the files from current target(source) to destination(work directory which we set in container)
+   d. RUN command - RUN the commands in container
+   e. EXPOSE command - which exposes the post for ruinning in container
+   f. CMD command - which takes array of string as commands to execute
+
+2. docker build . -> To build the image form dockerfile from current directory
+
+3. docker images -> to see the list of build images
+
+4. docker ps -> to see list of running containers
+
+5. docker run imageName -> to run image
+   docker run -p 4000:4000 imageName ( -p tag [publish] to map container running port to local port)
+   docker run -p 4000:4000 -it imageName (-i [interactive] tag to run container in interactive and -t [tty] to get terminal in use -d[detached] from terminal so app runs in background).
+   docker run --env-file .env -it -p 4000:4000 imageName - to make use of .env file to replace environment variable in container
