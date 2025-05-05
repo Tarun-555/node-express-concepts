@@ -20,3 +20,9 @@ Docker Basics
    docker run -p 4000:4000 imageName ( -p tag [publish] to map container running port to local port)
    docker run -p 4000:4000 -it imageName (-i [interactive] tag to run container in interactive and -t [tty] to get terminal in use -d[detached] from terminal so app runs in background).
    docker run --env-file .env -it -p 4000:4000 imageName - to make use of .env file to replace environment variable in container
+
+   docker networking
+
+   - docker create network <network_name>
+
+   - docker network connect <network_name> <container_name>

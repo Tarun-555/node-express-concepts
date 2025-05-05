@@ -1,0 +1,6 @@
+POSTGRES_PASSWORD=tarun
+POSTGRES_HOST_AUTH_METHOD=trust
+# DB_NAME=posts-db
+# DB_PORT=5432
+# DB_USER=postgres
+# DB_HOST="localhost"
